@@ -11,9 +11,8 @@ pip install -v -e .  # or "python setup.py develop"
 
 ## 数据准备
 目的是转换成COCO格式的数据，方式有两：
-1. 下载百度云链接
-2. 自己生成（请合理配置文件中的路径）
-或者：
+1. 下载: [百度云链接](https://pan.baidu.com/s/1dUNt_Wl3WVbqip6oVQ_tuA)  密码: oqqf
+2. 自己生成(请合理配置文件中的路径):
 ```bash
 # 文件中的路径请根据实际情况配置
 # 训练集与测试集的划分
@@ -33,8 +32,9 @@ data
 ```
 
 ## 模型准备
-1. 预训练模型：下载百度云链接(已在MSCOCO2017上预训练)，放于`pretrain_model/`下
-2. 最终已训练模型： 
+放于`pretrain_model/`下
+1. 预训练模型：下载[百度云链接]()(已在MSCOCO2017上预训练)，
+2. 最终已训练模型： 下载[百度云链接]()(final model)
 
 ## 训练
 ```bash
@@ -45,9 +45,9 @@ data
 ./test_sonar.sh # 目录位置及配置可在里面更改
 
 # 转换成csv
-python ./tools/turn_pkl_to_csv.py ${DIR}/bbox_predict.pkl --json_path data/annotation/a-test.json
+python ./tools/turn_pkl_to_csv.py work_dirs/cascade_rcnn_dconv_c3-c5_r101_uncertain_MS_dufpn_1x/bbox_predict.pkl --json_path data/annotation/a-test.json
 
-# 可视化
+# 可视化, 目录位置可在里面更改
 python tools/vis_det.py  
 ```
 

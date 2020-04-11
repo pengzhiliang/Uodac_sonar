@@ -530,7 +530,6 @@ class Resize(object):
                                               self.keep_ratio)
         return repr_str
 
-    
 @PIPELINES.register_module
 class AbjointResize(object):
     
